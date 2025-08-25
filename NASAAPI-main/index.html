@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Espacial NASA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Galería Espacial NASA</h1>
+            <p class="subtitle">Explora el universo a través de imágenes oficiales de la NASA</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Menú de filtros -->
+            <section class="filter-section">
+                <div class="filter-menu">
+                    <button class="filter-btn active" data-filter="all">🌌 Todos</button>
+                    <button class="filter-btn" data-filter="planets">🪐 Planetas</button>
+                    <button class="filter-btn" data-filter="stars">⭐ Estrellas</button>
+                    <button class="filter-btn" data-filter="galaxies">🌌 Galaxias</button>
+                    <button class="filter-btn" data-filter="nebulae">☁️ Nebulosas</button>
+                </div>
+            </section>
+
+            <!-- Buscador -->
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Busca planetas, estrellas, galaxias...">
+                    <button id="searchButton" class="search-button">Buscar</button>
+                </div>
+            </section>
+
+            <!-- Galería principal filtrable -->
+            <section class="gallery-section">
+                <h2 class="section-title" id="galleryTitle">🌌 Todas las categorías</h2>
+                <div id="mainGallery" class="gallery">
+                    <div class="loading">Cargando contenido...</div>
+                </div>
+            </section>
+
+            <!-- Resultados de búsqueda -->
+            <section class="gallery-section" id="searchResults" style="display: none;">
+                <h2 class="section-title">🔍 Resultados de búsqueda</h2>
+                <div id="searchGallery" class="gallery">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Galería Espacial NASA</h3>
+                    <p>Explorando el cosmos através de las imágenes más impresionantes del universo.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <a href="https://www.nasa.gov" target="_blank">Sitio oficial NASA</a>
+                    <a href="https://images.nasa.gov" target="_blank">NASA Image Gallery</a>
+                    <a href="https://api.nasa.gov" target="_blank">NASA API</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Este proyecto utiliza la API pública de NASA para mostrar imágenes del espacio.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Galería Espacial NASA. Imágenes cortesía de NASA. Uso educativo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para imágenes -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <p id="modalDate"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+  import { initApp } from "./js/controllers/nasaController.js";
+  document.addEventListener("DOMContentLoaded", initApp);
+    </script>
+</body>
+</html>
