@@ -18,6 +18,7 @@
         <div class="container">
             <!-- Menú de filtros -->
             <section class="filter-section">
+                <h2 class="sr-only">Filtros</h2>
                 <div class="filter-menu">
                     <button class="filter-btn active" data-filter="all">🌌 Todos</button>
                     <button class="filter-btn" data-filter="planets">🪐 Planetas</button>
@@ -29,6 +30,7 @@
 
             <!-- Buscador -->
             <section class="search-section">
+                <h2 class="sr-only">Buscador</h2>
                 <div class="search-container">
                     <input type="text" id="searchInput" class="search-input" placeholder="Busca planetas, estrellas, galaxias...">
                     <button id="searchButton" class="search-button">Buscar</button>
@@ -80,9 +82,9 @@
     <div id="imageModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img id="modalImage" src="" alt="">
+            <img id="modalImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Imagen seleccionada">
             <div class="modal-info">
-                <h3 id="modalTitle"></h3>
+                <h3 id="modalTitle">Título de la imagen</h3>
                 <p id="modalDescription"></p>
                 <p id="modalDate"></p>
             </div>
